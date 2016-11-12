@@ -138,7 +138,7 @@ class CueSDK {
 		* @param {boolean} [exclusive=false] - If true, enable exclusive mode.
 	*/
 	constructor(clear = false, exclusive = false) {
-		this.CueSDKLib = ffi.Library(path.join(__dirname, 'bin', process.arch, 'CUESDK_2013.dll'), {
+		this.CueSDKLib = ffi.Library(path.join('./bin/x64/CUESDK.dll'), {
 			'CorsairSetLedsColors': ['bool', ['int', 'pointer']],
 			'CorsairSetLedsColorsAsync': ['bool', ['int', 'pointer', 'pointer', 'pointer']],
 			'CorsairGetDeviceCount': ['int', []],
